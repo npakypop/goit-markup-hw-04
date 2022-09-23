@@ -114,7 +114,7 @@ body {
   color: var(--secondary-color);
 }
 
-/* Header */
+/*---------------------------------------------------------------------------- Header --------------------------------------------------------------------*/
 
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -167,12 +167,18 @@ body {
   color: var(--accent-color);
 }
 
-/* header contacts */
+/*--------------------------------------------------------- header contacts ----------------------------------------------------------*/
 
 .header-contact {
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+/* .header-contact .item {
+  display: flex;
+} */
+.header-contact-link{
+  display: inline-flex;
 }
 .header-contact .item + .item {
   margin-left: 50px;
@@ -197,7 +203,7 @@ body {
   color: var(--accent-color);
 }
 
-/* section decision */
+/* -----------------------------------------------------------------section decision --------------------------------------------------------------------------*/
 
 .decision {
   padding-top: 200px;
@@ -236,6 +242,16 @@ body {
 .specifics-wrapper-item {
   /* width: calc((100%-90px)/4); */
   width: 270px;
+}
+
+.rect {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background-color: var(--btn-bcg-color)
+}
+.specifics-wrapper .icon{
+  margin: auto;
 }
 /* Также можно было вместо использования псевдоклассов указать один класс с общими свойствами для всех элементов и потом отдельно создать классы для каждого элемента изменяя только bcg-image. и добавить эти классы в каждый элемент списка 
 .specifics-wrapper-item::before {
@@ -351,34 +367,70 @@ body {
   color: var(--secondary-color);
 }
 .team-wrapper-item .post {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   color: var(--primary-color);
 }
 
+.team-social {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 206px;
+  height: 44px;
+}
+.team-social .item + .item {
+  margin-left: 10px;
+}
+.team-social .social-link {
+  display: flex;
+ 
+  color: #AFB1B8;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+}
+.team-social .icon {
+  margin: auto;
+  fill: currentColor;
+}
+.team-social .link:hover,
+.team-social .link:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
 
 /* Clients */
 
 .clients-wrapper {
   display: flex;
 }
-.clients-wrapper .item {
+.clients-wrapper .item + .item {
+  margin-left: 30px;
+}
+.clients-wrapper .client-link {
   display: flex;
+  color: #AFB1B8;
   width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
 }
-.clients-wrapper .item + .item {
-  margin-left: 30px;
-}
-/* .clients-wrapper .client-link {
-  fill: var(--primary-color);
-} */
 .clients-wrapper .icon{
-  fill: #AFB1B8;
+  margin: auto;
+  fill: currentColor;
 }
+.clients-wrapper .link:hover,
+.clients-wrapper .link:focus {
+  color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+
 /* Portfolio */
 
 .filter-wrapper {
@@ -397,6 +449,10 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
   width: calc((100% - 60px) / 3);
+}
+.examples-wrapper-item:hover{
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .examples-wrapper-item:nth-child(3n) {
   margin-right: 0;
@@ -431,12 +487,17 @@ body {
 }
 
 /* footer */
-
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: var(--bcg-sc-color);
+}
+.footer-wrapper {
+  width: 231px;
+}
+.page-footer .container {
+  display: flex;
 }
 .page-footer .logo {
   display: block;
@@ -467,4 +528,45 @@ body {
 .footer-contact-link:hover,
 .footer-contact-link:focus {
   color: var(--accent-color);
+}
+
+.footer-social {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.footer-social-text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16/14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-social-list .item+.item {
+  margin-left: 10px;
+}
+.footer-social-list .social-link {
+  display: flex;
+
+  color: var(--white-color);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-social-list .icon {
+  margin: auto;
+  fill: currentColor;
+}
+.footer-social-list .link:hover,
+.footer-social-list .link:focus {
+  background-color: var(--accent-color);
 }
